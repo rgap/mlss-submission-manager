@@ -1,0 +1,82 @@
+$def with (form, success='')
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Machine Learning Summer School at Arequipa, Peru - Application</title>
+<link href="/css/application_forms.css" rel="stylesheet" type="text/css" />
+<!-- TODO: remove this 
+<link href="/css/foundation.min.css" rel="stylesheet" type="text/css" />
+<link href="/css/bootswatch.css" rel="stylesheet" type="text/css" />
+<link href="/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+-->
+<link rel="icon" type="image/png" href="/img/favicon.ico" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-77814726-1', 'auto');
+  ga('set', 'title', 'application_form');
+  ga('send', 'pageview', location.pathname);
+</script>
+$if success == 'False':
+    <script>ga('send', 'event', 'submission', 'error when submitted');</script>
+$elif success == 'True':
+    <script>ga('send', 'event', 'submission', 'successfully submitted');</script>
+$if not success:
+    <script>ga('send', 'event', 'pageview', 'form viewed');</script>
+</head>
+
+<body>
+
+<div class="submitted">
+$if success == 'False':
+    <p>Some <strong>error occured</strong>, <a href="/submit_application">go back</a> and try again. If the problem persists <a href="mailto:arequipa.mlss.webmaster@gmail.com?subject=Report an error [MLSS website]">send us an email</a>. Thank you.</p>
+    <!--TODO: line above must be changed-->
+$elif success == 'True':
+    <p>Thank you for <strong>submitting your application</strong>. You should receive a confirmation email very soon.</p>
+    <p><a href="http://www.ucsp.edu.pe/ciet/mlss16/index.html">Back to the Machine Learning Summer School website</a></p>
+</div>
+
+$if not success: 
+    <form method="post" enctype="multipart/form-data">
+        <p>Welcome to the <strong>Machine Learning Summer School 2016</strong> in Arequipa, Peru. <strong>The student application deadline date was extended, now it's on May 30th, you might receive an admission notification on June 15th, and letters of reference must be submitted before June 5th</strong>.
+        <br>
+        <br>
+        Please fill out the form below to submit your application. All fields are required unless explicitly specified.</p>
+
+        <hr/>
+        $:render_form(form, 'email', 'email_again')
+        <hr/>
+        $:render_form(form, 'first_name', 'resume')
+        <hr/>
+        $:render_form(form, 'referee_name', 'referee_email_again')
+        <hr/>
+        $:render_form(form, 'poster_title', 'abstract')
+        <hr/>
+        $:render_form(form, 'cover_letter', 'cover_letter')
+        <hr/>
+        <p>We have a limited number of <strong>scholarships</strong> to 
+          cover travel and/or registration expenses. These will be awarded 
+          preferably to accepted applicants who would not be otherwise able 
+          to attend (e.g. from developing countries, or departments with limited 
+          travel budgets). Acceptance to the summer school will be judged 
+          independently of financial need. If you wish to apply for financial 
+          support, please tick the checkbox and provide the following additional 
+          information.</p>
+        <ol>
+        <li>Your <strong>referee must provide a paragraph</strong> in their letter of recommendation justifying the need for financial support.</li>
+
+        <li>Please give an <strong>estimate of the amount required</strong> (fees + travel expenses - amount available from other sources) below.</li>
+        </ol>
+        
+        $:render_form(form, 'travel_support', 'travel_support_budget')
+        <hr/>
+        $:render_form(form, 'submit', 'submit')
+    </form>
+
+</body>
+</html>

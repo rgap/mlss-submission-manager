@@ -1,0 +1,62 @@
+$def with (form, applicant, success='')
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>MLSS 2016 Peru - Admitted $applicant.first_name $applicant.last_name</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+<link href="/css/application_forms.css" rel="stylesheet" type="text/css" />
+<link rel="icon" type="image/png" href="/img/favicon.ico" />
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-77814726-1', 'auto');
+  ga('set', 'title', 'application_form');
+  ga('send', 'pageview', location.pathname);
+</script>
+<script>ga('send', 'event', 'pageview', 'payment page viewed');</script>
+</head>
+
+<body>
+
+<div class="submitted">
+$if success == 'False' or not applicant:
+    <p>Some <strong>error occured</strong>, go back and try again. If the problem persists <a href="mailto:arequipa.mlss.webmaster@gmail.com?subject=Report an error [MLSS website]">send us an email</a>. Thank you.</p>
+
+$if applicant: 
+    <br>
+    <br>
+    <p>Dear $applicant.first_name $applicant.last_name, your application to the Machine Learning Summer School'16 in Peru has been accepted. <br>
+
+    <h2>Update your personal information</h2>    
+        Please enter your <strong>Passport number or DNI if you are Peruvian.</strong> Check if your full name is correct. This information is required for your certificate. If you need to change it, do it then click submit.
+        </p>
+        
+    $if success == 'True':
+        <br>
+        <strong>Your information has been updated. Now your record looks like this, everything is ready for you to make the payment.</strong>
+        <br>
+    <form method="post">
+        $:form.render_css()
+    </form>
+    <h2>Registration</h2>
+
+        Below is your username and password, you should enter those to make the payment through this <a href="https://pagos.ucsp.edu.pe">secure payment gateway</a>. It's in spanish, so please follow the steps on this <a href="/tutorial/tutorial.html">tutorial</a> if you need some help.
+        <br>
+        <br>
+        <strong>Username:</strong> $applicant.username
+        <br>
+        <strong>Password:</strong> $applicant.password
+        <br>
+        <br>
+        The payment is in local cunrrency (Peruvian Sol (PEN)) which is going to be equivalent to the current exchange rate of 400.00 USD. 
+        <br>
+        <br>
+</div>
+
+</body>
+</html>

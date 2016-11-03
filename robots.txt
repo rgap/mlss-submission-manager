@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /resumes/
+Disallow: /resumes/*

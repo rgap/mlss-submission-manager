@@ -1,0 +1,2008 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Language" content="en-us"/>
+
+<title>Machine Learning Summer School Admin - Attendee</title>
+    <link href="css/defaults.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+
+
+
+</head>
+
+<body>
+
+<div class="topmenu">
+
+    
+    <ul class="extlinks">    <!-- TODO: This must be removed somehow -->
+    <li><a href="account/help.html">How to use?</a></li>
+    <li><a href="account/register.html">Register</a></li>
+    <li class="last"><a href="account/login.html">Sign in</a></li>
+    <!-- TODO: This must be removed somehow -->
+    
+    </ul>
+</div>
+
+<div class="searchbar">
+    <form action="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html" method="get">
+        <input class="search" type="text" value="">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="stats">
+<span class="total">Total: 211</span> - 
+<span class="admitted">Admitted: 62</span> - 
+<span class="rejected">Rejected: 45</span> - 
+<span class="undecided">Undecided: 3</span> - 
+<span class="attendee">Attendee: 101</span> - 
+<span class="scholarships">Scholarships: 0</span> - 
+<span class="allocated_amount">Financial support: $4400</span>
+</div>
+
+<div class="leftmenu">
+    <a href="pending.html" id="pending">No reference 
+</a>
+<strong>
+<a href="new.html" id="new">Undecided (3)
+
+</a>
+</strong>
+
+<a href="admitted.html" id="admitted">Admitted 
+</a>
+<a href="all.html" id="all">All Applicants 
+</a>
+<a href="rejected.html" id="rejected">Rejected 
+</a>
+<a href="reviewed.html" id="reviewed">My Reviews 
+</a>
+<a href="scholarship_recipient.html" id="scholarship_recipient">Scholarship Recipients 
+</a>
+<a class=selected href="attendee.html" id="attendee">Attendees 
+</a>
+
+</div>
+
+<div class="content" id="content_attendee">
+
+
+<form name="theform" method="post">
+<input type="hidden" name="context" value="attendee">
+    <div class="actionbar">
+        <input class="admit" type="button" value="Admit" 
+onClick="document.theform.action = '/admit'; document.theform.submit();">
+<input class="reject" type="button" value="Reject" 
+onClick="document.theform.action = '/reject'; document.theform.submit();">
+<input type="button" value="Undecide" 
+onClick="document.theform.action = '/undecide'; document.theform.submit();">
+<select class="score" name="score"
+onChange="document.theform.action = '/rate'; document.theform.submit();">
+<option value="">Rate applicants</option>
+<option value="" disabled="">---------------------------------------------------</option>
+
+<option value="5">5 stars: definite accept,&nbsp;&nbsp;&nbsp;&nbsp;top 10%</option> 
+<option value="4">4 stars: as many as we can,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="3">3 stars: maybe,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="2">2 stars: probably reject,&nbsp;&nbsp;&nbsp;&nbsp;20%</option> 
+<option value="1">1 star: definitely reject,&nbsp;&nbsp;&nbsp;&nbsp;bottom  50%</option> 
+
+</select>
+
+
+    
+    <span class="paging">
+    <a href="attendee@context=attendee&amp;order=id&amp;desc=desc.html">&#8249; Previous</a>
+51 - 
+100
+of 101
+<a href="attendee@start=100&amp;context=attendee&amp;order=id&amp;desc=desc.html">Next &#8250;</a>
+
+    </span>
+    </div>
+
+    <div class="results">
+    <table>
+    <tr>
+<th class="checkbox"></th>
+<th id="id"><a class="selected" href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">ID 
+<small>&#9660;</small>
+</a></th>
+<th id="first_name"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Applicant Name</a></th>
+<th id="occupation"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Occupation</a></th>
+<th id="affiliation"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Affiliation</a></th>
+<th id="interests"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Interests</a></th>
+<th id="travel_support_budget"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">FS ($)</a></th>
+<th id="grant_amount"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">FSA ($)</a></th>
+<th id="referee_rating"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Referee Rating</a></th>
+<th id="number_comments"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Comments</a></th>
+<th id="calculated_vote"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Overall Rating</a></th>
+<th id="status"><a href="attendee@start=50&amp;desc=desc&amp;order=id&amp;context=attendee.html">Status</a></th>
+</tr>
+
+
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="102" onclick="highlight_row(this)"></td>
+    <td>102</td>
+    <td>
+    <a href="applicant/102@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Eli Oko">Eli Oko</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Nat">Nat</span>
+    </td>
+    <td><em><span title="brain-computer interfaces, neuroimaging, signal processing, pattern recognition, neuroscience, cognitive science">brain-computer interfaces, neuroimaging, signal processing, pattern recognition, neuroscience, cogni...</span></em></td>
+    <td class="score_column">
+    $3000
+    </td>
+    
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ale"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="101" onclick="highlight_row(this)"></td>
+    <td>101</td>
+    <td>
+    <a href="applicant/101@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Jak Fis">Jak Fis</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Fri">Fri</span>
+    </td>
+    <td><em><span title="Complex Systems, Simulation and Modelling, Earth System Science, Artificial Life">Complex Systems, Simulation and Modelling, Earth System Science, Artificial Life</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="100" onclick="highlight_row(this)"></td>
+    <td>100</td>
+    <td>
+    <a href="applicant/100@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Eri Cha">Eri Cha</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Postdoc</td>
+    <td>
+    <span title="Imp">Imp</span>
+    </td>
+    <td><em><span title="climate, risk, weather patterns, data mining, pattern recognition ">climate, risk, weather patterns, data mining, pattern recognition </span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="99" onclick="highlight_row(this)"></td>
+    <td>99</td>
+    <td>
+    <a href="applicant/99@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Gül Kal">Gül Kal</span></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Bil">Bil</span>
+    </td>
+    <td><em><span title="Cancer Prediction,Feature Extraction,Missing Data Imputation,Genomic Privacy">Cancer Prediction,Feature Extraction,Missing Data Imputation,Genomic Privacy</span></em></td>
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ozn"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="98" onclick="highlight_row(this)"></td>
+    <td>98</td>
+    <td>
+    <a href="applicant/98@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Gav Gra">Gav Gra</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="The">The</span>
+    </td>
+    <td><em><span title="variational autoencoders, game theory, probabilistic programming, structure learning, greedy methods, representation learning, stochastic computation graphs, transactional filter graphs">variational autoencoders, game theory, probabilistic programming, structure learning, greedy methods...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="97" onclick="highlight_row(this)"></td>
+    <td>97</td>
+    <td>
+    <a href="applicant/97@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Esz Ver">Esz Ver</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="theoretical neuroscience, probabilistic inference, uncertainty in the brain">theoretical neuroscience, probabilistic inference, uncertainty in the brain</span></em></td>
+    <td class="score_column">
+    $1000
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="96" onclick="highlight_row(this)"></td>
+    <td>96</td>
+    <td>
+    <a href="applicant/96@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Haz Kop">Haz Kop</span></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Bog">Bog</span>
+    </td>
+    <td><em><span title="Machine Learning, Matrix and Tensor Factorizations, Bayesian Statistics, MCMC">Machine Learning, Matrix and Tensor Factorizations, Bayesian Statistics, MCMC</span></em></td>
+    <td class="score_column">
+    $2800
+    </td>
+    
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ali"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="95" onclick="highlight_row(this)"></td>
+    <td>95</td>
+    <td>
+    <a href="applicant/95@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Ber Esc">Ber Esc</span></a>
+    </td>
+    <td>Industry Researcher</td>
+    <td>
+    <span title="DEL">DEL</span>
+    </td>
+    <td><em><span title="NEURAL NETWORKS, DEEP LEARNING, MODELING AND DECISION MAKING, DATA SCIENCE">NEURAL NETWORKS, DEEP LEARNING, MODELING AND DECISION MAKING, DATA SCIENCE</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Jos"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="87" onclick="highlight_row(this)"></td>
+    <td>87</td>
+    <td>
+    <a href="applicant/87@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Jua Man">Jua Man</span></a>
+    </td>
+    <td>Postdoc</td>
+    <td>
+    <span title="Eco">Eco</span>
+    </td>
+    <td><em><span title="Machine learning, Dictionary Learning, Statistical learning, signal processing, support vector machines, random forest, feature selection">Machine learning, Dictionary Learning, Statistical learning, signal processing, support vector machi...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Nic"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="86" onclick="highlight_row(this)"></td>
+    <td>86</td>
+    <td>
+    <a href="applicant/86@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Agn Sło">Agn Sło</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Industry Researcher</td>
+    <td>
+    <span title="Jag">Jag</span>
+    </td>
+    <td><em><span title="Theoretical Machine Learning (Neural Networks), Computer Vision, NLP">Theoretical Machine Learning (Neural Networks), Computer Vision, NLP</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Dr "><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="85" onclick="highlight_row(this)"></td>
+    <td>85</td>
+    <td>
+    <a href="applicant/85@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Van Tra">Van Tra</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Pad">Pad</span>
+    </td>
+    <td><em><span title="Doing research in machine learning, especially for kernel methods ">Doing research in machine learning, especially for kernel methods </span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="84" onclick="highlight_row(this)"></td>
+    <td>84</td>
+    <td>
+    <a href="applicant/84@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Tim Lea">Tim Lea</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Deep Learning, Decision Trees, Ensemble Learning">Deep Learning, Decision Trees, Ensemble Learning</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Eib"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="83" onclick="highlight_row(this)"></td>
+    <td>83</td>
+    <td>
+    <a href="applicant/83@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Yas Ans">Yas Ans</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Scu">Scu</span>
+    </td>
+    <td><em><span title="Reinforcement Learning, Multiagent Systems, Multiobjective Optimization, Stochastic Optimization, Soft Robotics, Robot Control">Reinforcement Learning, Multiagent Systems, Multiobjective Optimization, Stochastic Optimization, So...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="82" onclick="highlight_row(this)"></td>
+    <td>82</td>
+    <td>
+    <a href="applicant/82@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Fri Gre">Fri Gre</span></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Foo">Foo</span>
+    </td>
+    <td><em><span title="statistical learning, support vector machines, big data, quantitative methods for development and agricultural economics, analysis of poverty and food security, commodity prices volatility, spatial price transmission">statistical learning, support vector machines, big data, quantitative methods for development and ag...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ada"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="81" onclick="highlight_row(this)"></td>
+    <td>81</td>
+    <td>
+    <a href="applicant/81@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Jua Gil">Jua Gil</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Machine Learning, Computer Vision, Computer Graphics, Software development">Machine Learning, Computer Vision, Computer Graphics, Software development</span></em></td>
+    <td class="score_column">
+    $700
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Mau"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="80" onclick="highlight_row(this)"></td>
+    <td>80</td>
+    <td>
+    <a href="applicant/80@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Nir Pra">Nir Pra</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Pri">Pri</span>
+    </td>
+    <td><em><span title="Reinforcement Learning, Time Series Analysis, Natural Language Processing; ML Applications in Personalized Medicine, Neuroscience">Reinforcement Learning, Time Series Analysis, Natural Language Processing; ML Applications in Person...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Bar"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="78" onclick="highlight_row(this)"></td>
+    <td>78</td>
+    <td>
+    <a href="applicant/78@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Cha Tru">Cha Tru</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="CML">CML</span>
+    </td>
+    <td><em><span title="Statistics, kernel methods, signal processing, supervised learning on functional data">Statistics, kernel methods, signal processing, supervised learning on functional data</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Nic"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="77" onclick="highlight_row(this)"></td>
+    <td>77</td>
+    <td>
+    <a href="applicant/77@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Ric Kli">Ric Kli</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="The">The</span>
+    </td>
+    <td><em><span title="Reinforcement Learning, Online Learning, Non-cooperative Game Theory, Security Games, Space Debris Dilemma ">Reinforcement Learning, Online Learning, Non-cooperative Game Theory, Security Games, Space Debris D...</span></em></td>
+    <td class="score_column">
+    $1250
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="75" onclick="highlight_row(this)"></td>
+    <td>75</td>
+    <td>
+    <a href="applicant/75@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Roe Enb">Roe Enb</span></a>
+    </td>
+    <td>Industry Researcher</td>
+    <td>
+    <span title="Adi">Adi</span>
+    </td>
+    <td><em><span title="Machine Learning, Data Science, Dancing, Optimization">Machine Learning, Data Science, Dancing, Optimization</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Tal"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="73" onclick="highlight_row(this)"></td>
+    <td>73</td>
+    <td>
+    <a href="applicant/73@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Adr Sot">Adr Sot</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Sto">Sto</span>
+    </td>
+    <td><em><span title="physics, math, programming, mathematical modeling for social sciences">physics, math, programming, mathematical modeling for social sciences</span></em></td>
+    <td class="score_column">
+    $2100
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Mar"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="72" onclick="highlight_row(this)"></td>
+    <td>72</td>
+    <td>
+    <a href="applicant/72@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Víc Bri">Víc Bri</span></a>
+    </td>
+    <td>Faculty</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Artificial Intelligence, Machine Learning ">Artificial Intelligence, Machine Learning </span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Jos"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="71" onclick="highlight_row(this)"></td>
+    <td>71</td>
+    <td>
+    <a href="applicant/71@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Mas Reg">Mas Reg</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Ist">Ist</span>
+    </td>
+    <td><em><span title="Robotics, machine learning, tactile sensing and manipulation">Robotics, machine learning, tactile sensing and manipulation</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Lor"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="66" onclick="highlight_row(this)"></td>
+    <td>66</td>
+    <td>
+    <a href="applicant/66@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Sas Jaf">Sas Jaf</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Classification algorithms for time-series, privacy-preserving machine learning">Classification algorithms for time-series, privacy-preserving machine learning</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="64" onclick="highlight_row(this)"></td>
+    <td>64</td>
+    <td>
+    <a href="applicant/64@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Cer Guz">Cer Guz</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Gaz">Gaz</span>
+    </td>
+    <td><em><span title="Machine Learning, Computer Vision">Machine Learning, Computer Vision</span></em></td>
+    <td class="score_column">
+    $1500
+    </td>
+    
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Has"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="63" onclick="highlight_row(this)"></td>
+    <td>63</td>
+    <td>
+    <a href="applicant/63@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Mic Bur">Mic Bur</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Bro">Bro</span>
+    </td>
+    <td><em><span title="dimensionality reduction, neural decoding, Gaussian process regression">dimensionality reduction, neural decoding, Gaussian process regression</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Bas"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="61" onclick="highlight_row(this)"></td>
+    <td>61</td>
+    <td>
+    <a href="applicant/61@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Emi Gar">Emi Gar</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Pon">Pon</span>
+    </td>
+    <td><em><span title="deep learning, computer vision, image processing">deep learning, computer vision, image processing</span></em></td>
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Bel"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="60" onclick="highlight_row(this)"></td>
+    <td>60</td>
+    <td>
+    <a href="applicant/60@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Mat Cal">Mat Cal</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Kernel Methods - Learning Theory  - Probabilistic Graphical Models">Kernel Methods - Learning Theory  - Probabilistic Graphical Models</span></em></td>
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="57" onclick="highlight_row(this)"></td>
+    <td>57</td>
+    <td>
+    <a href="applicant/57@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Too Van">Too Van</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="KU ">KU </span>
+    </td>
+    <td><em><span title="semi-supervised clustering, constraint-based clustering, algorithm selection, hyperparameter selection">semi-supervised clustering, constraint-based clustering, algorithm selection, hyperparameter selecti...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Hen"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="56" onclick="highlight_row(this)"></td>
+    <td>56</td>
+    <td>
+    <a href="applicant/56@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Gre Val">Gre Val</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Industry Researcher</td>
+    <td>
+    <span title="PUC">PUC</span>
+    </td>
+    <td><em><span title="Natural Language Processing">Natural Language Processing</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Mar"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="53" onclick="highlight_row(this)"></td>
+    <td>53</td>
+    <td>
+    <a href="applicant/53@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Moh  Ab">Moh  Ab</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="The">The</span>
+    </td>
+    <td><em><span title="Complex network system, online human behavior modeling ">Complex network system, online human behavior modeling </span></em></td>
+    <td class="score_column">
+    $2500
+    </td>
+    
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Kat"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="50" onclick="highlight_row(this)"></td>
+    <td>50</td>
+    <td>
+    <a href="applicant/50@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Lud Min">Lud Min</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="ENS">ENS</span>
+    </td>
+    <td><em><span title="Semi-supervised learning, Imbalanced classes, Feature selection, Datasets comparison, Random Forest">Semi-supervised learning, Imbalanced classes, Feature selection, Datasets comparison, Random Forest</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Nic"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="49" onclick="highlight_row(this)"></td>
+    <td>49</td>
+    <td>
+    <a href="applicant/49@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Mar Wie">Mar Wie</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="graphical models, Bayesian and Bayesian non-parametric for probabilistic modeling and inference, biomedical data analysis, dimensionality reduction">graphical models, Bayesian and Bayesian non-parametric for probabilistic modeling and inference, bio...</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Vol"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="42" onclick="highlight_row(this)"></td>
+    <td>42</td>
+    <td>
+    <a href="applicant/42@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Jen Cop">Jen Cop</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Natural Language Processing, Word representations, Deep Learning, Probabilistic Graphical Models, Information extraction">Natural Language Processing, Word representations, Deep Learning, Probabilistic Graphical Models, In...</span></em></td>
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Jos"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="41" onclick="highlight_row(this)"></td>
+    <td>41</td>
+    <td>
+    <a href="applicant/41@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Mil Dia">Mil Dia</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Deep Learning, Machine Learning, Information Retrieval, Object Recognition, Features Extraction, Regularization">Deep Learning, Machine Learning, Information Retrieval, Object Recognition, Features Extraction, Reg...</span></em></td>
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Jos"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="39" onclick="highlight_row(this)"></td>
+    <td>39</td>
+    <td>
+    <a href="applicant/39@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Ced Mal">Ced Mal</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="ENS">ENS</span>
+    </td>
+    <td><em><span title="Global optimization, active learning, convex optimization">Global optimization, active learning, convex optimization</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Nic"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="38" onclick="highlight_row(this)"></td>
+    <td>38</td>
+    <td>
+    <a href="applicant/38@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Gra Mez">Gra Mez</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Nat">Nat</span>
+    </td>
+    <td><em><span title="Deep Learning, Structural Learning, Kernel Classifiers, Handwritten Recognition">Deep Learning, Structural Learning, Kernel Classifiers, Handwritten Recognition</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ern"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="37" onclick="highlight_row(this)"></td>
+    <td>37</td>
+    <td>
+    <a href="applicant/37@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="ADE ADE">ADE ADE</span></a>
+    </td>
+    <td>Faculty</td>
+    <td>
+    <span title="LAN">LAN</span>
+    </td>
+    <td><em><span title="MACHINE LEARNING,DATABASE,DATA MINING,ARTIFICIAL INTELLIGENCE">MACHINE LEARNING,DATABASE,DATA MINING,ARTIFICIAL INTELLIGENCE</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Pro"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="36" onclick="highlight_row(this)"></td>
+    <td>36</td>
+    <td>
+    <a href="applicant/36@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Rob Pin">Rob Pin</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Undergraduate student</td>
+    <td>
+    <span title="TU ">TU </span>
+    </td>
+    <td><em><span title="Deep Learning, (Inverse) Reinforcement Learning, Graphical Models, Generative Models">Deep Learning, (Inverse) Reinforcement Learning, Graphical Models, Generative Models</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ger"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="35" onclick="highlight_row(this)"></td>
+    <td>35</td>
+    <td>
+    <a href="applicant/35@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Ido Kis">Ido Kis</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Tel">Tel</span>
+    </td>
+    <td><em><span title="ML, deep learning, text analysis, retrieval, NLP">ML, deep learning, text analysis, retrieval, NLP</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Nac"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="34" onclick="highlight_row(this)"></td>
+    <td>34</td>
+    <td>
+    <a href="applicant/34@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Niv Hai">Niv Hai</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Wei">Wei</span>
+    </td>
+    <td><em><span title="Data analysis, Machine learning, NLP">Data analysis, Machine learning, NLP</span></em></td>
+    <td class="score_column">
+    $2500
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="33" onclick="highlight_row(this)"></td>
+    <td>33</td>
+    <td>
+    <a href="applicant/33@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Ahm Als">Ahm Als</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Machine learning for genetic application - mixed data unsupervised learning - feature selection ">Machine learning for genetic application - mixed data unsupervised learning - feature selection </span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Nic"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="32" onclick="highlight_row(this)"></td>
+    <td>32</td>
+    <td>
+    <a href="applicant/32@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Alf De ">Alf De </span></a>
+    </td>
+    <td>Undergraduate student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Neural Networks,  Deep learning, Genetic Algorithms">Neural Networks,  Deep learning, Genetic Algorithms</span></em></td>
+    <td class="score_column">
+    $200
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Sam"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="31" onclick="highlight_row(this)"></td>
+    <td>31</td>
+    <td>
+    <a href="applicant/31@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Oma Flo">Oma Flo</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Embedded Systems, IoT, Automatic Learning">Embedded Systems, IoT, Automatic Learning</span></em></td>
+    <td class="score_column">
+    $2000
+    </td>
+    
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Jor"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="30" onclick="highlight_row(this)"></td>
+    <td>30</td>
+    <td>
+    <a href="applicant/30@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Rey Baq">Rey Baq</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="PUC">PUC</span>
+    </td>
+    <td><em><span title="ASR, UAV, ITS, Deep Learning">ASR, UAV, ITS, Deep Learning</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Lui"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="28" onclick="highlight_row(this)"></td>
+    <td>28</td>
+    <td>
+    <a href="applicant/28@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Si  Lee">Si  Lee</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Col">Col</span>
+    </td>
+    <td><em><span title="Deep Learning, Graphical Models, Optimization">Deep Learning, Graphical Models, Optimization</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Wei"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="27" onclick="highlight_row(this)"></td>
+    <td>27</td>
+    <td>
+    <a href="applicant/27@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Kat Gro">Kat Gro</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="CIS">CIS</span>
+    </td>
+    <td><em><span title="adversarial machine learning">adversarial machine learning</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Mic"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="23" onclick="highlight_row(this)"></td>
+    <td>23</td>
+    <td>
+    <a href="applicant/23@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Man Du">Man Du</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="real time data mining, deep learning, behaviour targeting">real time data mining, deep learning, behaviour targeting</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Dr."><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="21" onclick="highlight_row(this)"></td>
+    <td>21</td>
+    <td>
+    <a href="applicant/21@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Dav Mal">Dav Mal</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Tec">Tec</span>
+    </td>
+    <td><em><span title="Machine Learning, Deep Learning, Computer Vision, Remote Sensing, Multivariate Statistics">Machine Learning, Deep Learning, Computer Vision, Remote Sensing, Multivariate Statistics</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Ras"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="17" onclick="highlight_row(this)"></td>
+    <td>17</td>
+    <td>
+    <a href="applicant/17@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="And Lóp">And Lóp</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Machine Learning, Computer Science, Stochastic Processes, Differential Equations">Machine Learning, Computer Science, Stochastic Processes, Differential Equations</span></em></td>
+    <td class="score_column">
+    $850
+    </td>
+    
+    <td class="score_column">
+    $400
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Mau"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/></a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="11" onclick="highlight_row(this)"></td>
+    <td>11</td>
+    <td>
+    <a href="applicant/11@start=50&amp;context=attendee&amp;order=id&amp;desc=desc.html"><span title="Mah Sha">Mah Sha</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Faculty</td>
+    <td>
+    <span title="Nil">Nil</span>
+    </td>
+    <td><em><span title="Machine Learning - Deep learning - Computer Vision - Image Processing">Machine Learning - Deep learning - Computer Vision - Image Processing</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    </table>
+    </div>
+
+    <div class="actionbar">
+        <input class="admit" type="button" value="Admit" 
+onClick="document.theform.action = '/admit'; document.theform.submit();">
+<input class="reject" type="button" value="Reject" 
+onClick="document.theform.action = '/reject'; document.theform.submit();">
+<input type="button" value="Undecide" 
+onClick="document.theform.action = '/undecide'; document.theform.submit();">
+<select class="score" name="score"
+onChange="document.theform.action = '/rate'; document.theform.submit();">
+<option value="">Rate applicants</option>
+<option value="" disabled="">---------------------------------------------------</option>
+
+<option value="5">5 stars: definite accept,&nbsp;&nbsp;&nbsp;&nbsp;top 10%</option> 
+<option value="4">4 stars: as many as we can,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="3">3 stars: maybe,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="2">2 stars: probably reject,&nbsp;&nbsp;&nbsp;&nbsp;20%</option> 
+<option value="1">1 star: definitely reject,&nbsp;&nbsp;&nbsp;&nbsp;bottom  50%</option> 
+
+</select>
+
+
+    
+    <span class="paging">
+    <a href="attendee@context=attendee&amp;order=id&amp;desc=desc.html">&#8249; Previous</a>
+51 - 
+100
+of 101
+<a href="attendee@start=100&amp;context=attendee&amp;order=id&amp;desc=desc.html">Next &#8250;</a>
+
+    </span>
+    </div>
+</form>
+
+</div>
+
+<div class="copyright">
+Continued by <a href="http://relguzman.blogspot.pe/p/about-me.html">Rel Guzman</a>, created by <a href="http://alex.ksikes.net">Alex Ksikes</a> |
+<a href="cdn-cgi/l/email-protection.html#f6979a938ed89d859f9d9385b6919b979f9ad895999bc98583949c939582cbd3c3b4bbbaa5a5d3c4c6b7b2bbbfb8d3c3b2d3c4c6909393929497959d"><strong>feedback</a></strong> |
+<a href="http://github.com/alexksikes/mlss/tree/master"><strong>his source code</strong></a>
+</div>
+
+<script src="js/defaults.js"></script>
+
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>

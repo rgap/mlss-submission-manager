@@ -1,0 +1,292 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Language" content="en-us"/>
+
+<title>Machine Learning Summer School Admin - New</title>
+    <link href="css/defaults.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/png" href="img/favicon.ico" />
+
+
+
+</head>
+
+<body>
+
+<div class="topmenu">
+
+    
+    <ul class="extlinks">    <!-- TODO: This must be removed somehow -->
+    <li><a href="account/help.html">How to use?</a></li>
+    <li><a href="account/register.html">Register</a></li>
+    <li class="last"><a href="account/login.html">Sign in</a></li>
+    <!-- TODO: This must be removed somehow -->
+    
+    </ul>
+</div>
+
+<div class="searchbar">
+    <form action="new@desc=desc&amp;order=id&amp;context=new.html" method="get">
+        <input class="search" type="text" value="">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="stats">
+<span class="total">Total: 211</span> - 
+<span class="admitted">Admitted: 62</span> - 
+<span class="rejected">Rejected: 45</span> - 
+<span class="undecided">Undecided: 3</span> - 
+<span class="attendee">Attendee: 101</span> - 
+<span class="scholarships">Scholarships: 0</span> - 
+<span class="allocated_amount">Financial support: $4400</span>
+</div>
+
+<div class="leftmenu">
+    <a href="pending.html" id="pending">No reference 
+</a>
+<strong>
+<a class=selected href="new.html" id="new">Undecided (3)
+
+</a>
+</strong>
+
+<a href="admitted.html" id="admitted">Admitted 
+</a>
+<a href="all.html" id="all">All Applicants 
+</a>
+<a href="rejected.html" id="rejected">Rejected 
+</a>
+<a href="reviewed.html" id="reviewed">My Reviews 
+</a>
+<a href="scholarship_recipient.html" id="scholarship_recipient">Scholarship Recipients 
+</a>
+<a href="attendee.html" id="attendee">Attendees 
+</a>
+
+</div>
+
+<div class="content" id="content_new">
+
+
+<form name="theform" method="post">
+<input type="hidden" name="context" value="new">
+    <div class="actionbar">
+        <input class="admit" type="button" value="Admit" 
+onClick="document.theform.action = '/admit'; document.theform.submit();">
+<input class="reject" type="button" value="Reject" 
+onClick="document.theform.action = '/reject'; document.theform.submit();">
+<input type="button" value="Undecide" 
+onClick="document.theform.action = '/undecide'; document.theform.submit();">
+<input type="button" value="Attendees" 
+onClick="document.theform.action = '/make_attendee'; document.theform.submit();">
+
+<select class="score" name="score"
+onChange="document.theform.action = '/rate'; document.theform.submit();">
+<option value="">Rate applicants</option>
+<option value="" disabled="">---------------------------------------------------</option>
+
+<option value="5">5 stars: definite accept,&nbsp;&nbsp;&nbsp;&nbsp;top 10%</option> 
+<option value="4">4 stars: as many as we can,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="3">3 stars: maybe,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="2">2 stars: probably reject,&nbsp;&nbsp;&nbsp;&nbsp;20%</option> 
+<option value="1">1 star: definitely reject,&nbsp;&nbsp;&nbsp;&nbsp;bottom  50%</option> 
+
+</select>
+
+
+    
+    <span class="paging">
+    1 - 
+3 
+of 3
+
+    </span>
+    </div>
+
+    <div class="results">
+    <table>
+    <tr>
+<th class="checkbox"></th>
+<th id="id"><a class="selected" href="new@desc=desc&amp;order=id&amp;context=new.html">ID 
+<small>&#9660;</small>
+</a></th>
+<th id="first_name"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Applicant Name</a></th>
+<th id="occupation"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Occupation</a></th>
+<th id="affiliation"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Affiliation</a></th>
+<th id="interests"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Interests</a></th>
+<th id="travel_support_budget"><a href="new@desc=desc&amp;order=id&amp;context=new.html">FS ($)</a></th>
+<th id="grant_amount"><a href="new@desc=desc&amp;order=id&amp;context=new.html">FSA ($)</a></th>
+<th id="referee_rating"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Referee Rating</a></th>
+<th id="number_comments"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Comments</a></th>
+<th id="calculated_vote"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Overall Rating</a></th>
+<th id="status"><a href="new@desc=desc&amp;order=id&amp;context=new.html">Status</a></th>
+</tr>
+
+
+    <tr class=
+    "updates"
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="169" onclick="highlight_row(this)"></td>
+    <td>169</td>
+    <td>
+    <a href="applicant/169@context=new&amp;order=id&amp;desc=desc.html"><span title="Car Ari">Car Ari</span></a>
+    </td>
+    <td>PhD student</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Machine learning, Natural Language Processing, Clustering Analysis">Machine learning, Natural Language Processing, Clustering Analysis</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Yva"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    "updates"
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="51" onclick="highlight_row(this)"></td>
+    <td>51</td>
+    <td>
+    <a href="applicant/51@context=new&amp;order=id&amp;desc=desc.html"><span title="MIG KOO">MIG KOO</span></a>
+    </td>
+    <td>Other</td>
+    <td>
+    <span title="Ver">Ver</span>
+    </td>
+    <td><em><span title="Data science, classification, deep learning">Data science, classification, deep learning</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by MIG"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    <tr class=
+    "updates"
+    >
+    <td class="checkbox"><input name="id" type="checkbox" value="24" onclick="highlight_row(this)"></td>
+    <td>24</td>
+    <td>
+    <a href="applicant/24@context=new&amp;order=id&amp;desc=desc.html"><span title="Ces Far">Ces Far</span></a>
+    - <a href="htt.html" title="homepage: htt"><img src="img/external.png"/></a>
+    </td>
+    <td>Faculty</td>
+    <td>
+    <span title="Uni">Uni</span>
+    </td>
+    <td><em><span title="Musica, Viajar, Deportes">Musica, Viajar, Deportes</span></em></td>
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    -
+    </td>
+    
+    <td class="score_column">
+    <a title="Referred by Jos"><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/full_small_green.gif'/><img src='img/stars/empty_small.gif'/>
+</a>
+    
+    <td class="score_column">
+    - 
+    </td>
+    
+    <td class="score_column">
+    - 
+    </td>
+    <td class="score_column">
+    -
+    </td>
+    
+    
+    </tr>
+    </table>
+    </div>
+
+    <div class="actionbar">
+        <input class="admit" type="button" value="Admit" 
+onClick="document.theform.action = '/admit'; document.theform.submit();">
+<input class="reject" type="button" value="Reject" 
+onClick="document.theform.action = '/reject'; document.theform.submit();">
+<input type="button" value="Undecide" 
+onClick="document.theform.action = '/undecide'; document.theform.submit();">
+<input type="button" value="Attendees" 
+onClick="document.theform.action = '/make_attendee'; document.theform.submit();">
+
+<select class="score" name="score"
+onChange="document.theform.action = '/rate'; document.theform.submit();">
+<option value="">Rate applicants</option>
+<option value="" disabled="">---------------------------------------------------</option>
+
+<option value="5">5 stars: definite accept,&nbsp;&nbsp;&nbsp;&nbsp;top 10%</option> 
+<option value="4">4 stars: as many as we can,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="3">3 stars: maybe,&nbsp;&nbsp;&nbsp;&nbsp;10%</option> 
+<option value="2">2 stars: probably reject,&nbsp;&nbsp;&nbsp;&nbsp;20%</option> 
+<option value="1">1 star: definitely reject,&nbsp;&nbsp;&nbsp;&nbsp;bottom  50%</option> 
+
+</select>
+
+
+    
+    <span class="paging">
+    1 - 
+3 
+of 3
+
+    </span>
+    </div>
+</form>
+
+</div>
+
+<div class="copyright">
+Continued by <a href="http://relguzman.blogspot.pe/p/about-me.html">Rel Guzman</a>, created by <a href="http://alex.ksikes.net">Alex Ksikes</a> |
+<a href="cdn-cgi/l/email-protection.html#50313c35287e3b23393b352310373d31393c7e333f3d6f2325323a3533246d7565121d1c030375626011141d191e756514756260363535343231333b"><strong>feedback</a></strong> |
+<a href="http://github.com/alexksikes/mlss/tree/master"><strong>his source code</strong></a>
+</div>
+
+<script src="js/defaults.js"></script>
+
+<script type="text/javascript">/* <![CDATA[ */(function(d,s,a,i,j,r,l,m,t){try{l=d.getElementsByTagName('a');t=d.createElement('textarea');for(i=0;l.length-i;i++){try{a=l[i].href;s=a.indexOf('/cdn-cgi/l/email-protection');m=a.length;if(a&&s>-1&&m>28){j=28+s;s='';if(j<m){r='0x'+a.substr(j,2)|0;for(j+=2;j<m&&a.charAt(j)!='X';j+=2)s+='%'+('0'+('0x'+a.substr(j,2)^r).toString(16)).slice(-2);j++;s=decodeURIComponent(s)+a.substr(j,m-j)}t.innerHTML=s.replace(/</g,'&lt;').replace(/>/g,'&gt;');l[i].href='mailto:'+t.value}}catch(e){}}}catch(e){}})(document);/* ]]> */</script></body>

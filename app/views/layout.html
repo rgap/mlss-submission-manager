@@ -1,0 +1,83 @@
+$def with (content, user, context, counts, query='', stats={})
+
+$def show_counts(context):
+    $if counts[context] and context == 'new': ($counts[context])
+    
+$def show_left_menu():
+    $for _context, name in [('pending', 'No reference'), ('new', 'Undecided'), ('admitted', 'Admitted'), ('all', 'All Applicants'), ('rejected', 'Rejected'), ('reviewed', 'My Reviews'), ('scholarship_recipient', 'Scholarship Recipients'), ('attendee', 'Attendees')]:
+        $if _context == 'new' and counts['new']: 
+            <strong>
+        $if context == _context:
+            <a class=selected href="/$_context" id="$_context">$name $:show_counts(_context)</a>
+        $else:
+            <a href="/$_context" id="$_context">$name $:show_counts(_context)</a>
+        $if _context == 'new' and counts['new']: 
+            </strong>
+            
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en"> 
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="Content-Language" content="en-us"/>
+
+<title>Machine Learning Summer School Admin - $context.capitalize()</title>
+    <link href="/css/defaults.css" rel="stylesheet" type="text/css"/>
+    <link rel="icon" type="image/png" href="/img/favicon.ico" />
+$#    <script type="text/javascript" src="/js/jquery-1.3.2.min.js"></script>
+$#    <script type="text/javascript" src="/js/thickbox.js"></script>
+$#    <link rel="stylesheet" href="/css/thickbox.css" type="text/css" />
+</head>
+
+<body>
+
+<div class="topmenu">
+$#    <a class=selected href="/">Applicants</a>
+    
+    <ul class="extlinks">\
+    $if not user.is_logged:
+        <!-- TODO: This must be removed somehow -->
+        <li><a href="/account/help">How to use?</a></li>
+        <li><a href="/account/register">Register</a></li>
+        <li class="last"><a href="/account/login">Sign in</a></li>
+        <!-- TODO: This must be removed somehow -->
+    $else:
+        <li class="login"><a href="/">Welcome $user.nickname, $user.email</a></li>
+        <li><a href="/account/help">How to use?</a></li>
+        <li><a href="/settings">Settings</a></li>
+        <li class="last"><a href="/account/logout">Sign out</a></li>
+    
+    $#<li class="logo"><a href="http://www.ucsp.edu.pe/ciet/mlss16/">Machine Learning Summer School 2016 - Admin</a></li>
+    </ul>
+</div>
+
+<div class="searchbar">
+    <form action="/search" method="get">
+        <input class="search" type="text" name="query" value="$query">
+        <input type="submit" value="Search">
+    </form>
+</div>
+
+<div class="stats">
+$for status in ['total','admitted', 'rejected', 'undecided', 'attendee', 'scholarships']:
+    <span class="$status">$status.capitalize(): $stats[status]</span> - 
+<span class="allocated_amount">Financial support: \$$stats.allocated_amount</span>
+</div>
+
+<div class="leftmenu">
+    $:show_left_menu()
+</div>
+
+<div class="content" id="content_$context">
+$:content
+</div>
+
+<div class="copyright">
+Continued by <a href="http://relguzman.blogspot.pe/p/about-me.html">Rel Guzman</a>, created by <a href="http://alex.ksikes.net">Alex Ksikes</a> |
+<a href="mailto:alex.ksikes@gmail.com?subject=$url_quote('[MLSS ADMIN] feedback')"><strong>feedback</a></strong> |
+<a href="http://github.com/alexksikes/mlss/tree/master"><strong>his source code</strong></a>
+</div>
+
+<script src="/js/defaults.js"></script>
+
+</body>
