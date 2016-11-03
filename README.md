@@ -147,7 +147,7 @@ And you can remove the folder "static_demo" because it's just the static demo of
 
 ## Online demo
 
-http://htmlpreview.github.io/?https://github.com/rgap/mlss-submission-manager/static_demo/index.html
+http://htmlpreview.github.io/?https://github.com/rgap/mlss-submission-manager/blob/master/static_demo/index.html
 
 ## Suggestions
 
